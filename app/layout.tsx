@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="../node_modules/preline/dist/preline.js"></Script>
-      <body className={source_code_pro.className}>
+      <body className={`${source_code_pro.className} font-nunito-eb`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

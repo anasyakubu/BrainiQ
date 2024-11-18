@@ -33,7 +33,7 @@ export async function POST(req: Request, res: Response) {
   const userQuestion = `${messages[messages.length - 1].content}`;
 
   const reportData: string = reqBody.data.reportData;
-  const query = `Represent this for searching relevant passages: patient medical report says: \n${reportData}. \n\n${userQuestion}`;
+  const query = `Represent this for searching relevant passages: study material report says: \n${reportData}. \n\n${userQuestion}`;
 
   const retrievals = await queryPineconeVectorStore(
     pinecone,
