@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script src="../node_modules/preline/dist/preline.js"></script>
+      <Script src="../node_modules/preline/dist/preline.js"></Script>
       <body className={source_code_pro.className}>
         <ThemeProvider
           attribute="class"
