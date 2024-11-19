@@ -123,7 +123,7 @@ const ReportComponent = ({ onReportConfirmation }: Props) => {
     }
     setIsLoading(true);
 
-    const response = await fetch("api/extractreportgemini", {
+    const response = await fetch("api/extractpdfgemini", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

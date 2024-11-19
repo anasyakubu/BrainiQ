@@ -20,7 +20,7 @@ type Props = {
 const ChatComponent = ({ reportData }: Props) => {
   const { messages, input, handleInputChange, handleSubmit, isLoading, data } =
     useChat({
-      api: "api/medichatgemini",
+      api: "api/pdfchatgemini",
     });
   return (
     <div className="h-full bg-muted/50 relative flex flex-col min-h-[50vh] rounded-xl p-4 gap-4">

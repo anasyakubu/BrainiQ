@@ -26,7 +26,7 @@ const ChatPDF = () => {
     <div className="grid h-screen w-full">
       <div className="flex flex-col">
         <header className="sticky top-0 z-10 flex h-[65px] bg-background items-center gap-1 border-b px-4">
-          <h1 className="w-full text-xl font-bold text-gray-900">
+          <h1 className="w-full text-xl font-bold ">
             <span className="flex flex-col">Chat PDF</span>
           </h1>
           <div className="w-full flex flex-row justify-end gap-2">
