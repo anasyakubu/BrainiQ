@@ -1,5 +1,7 @@
 "use client";
 
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Dropzone from "@/components/dropzone";
 import { Progress } from "@/components/ui/progress";
@@ -56,38 +58,42 @@ export default function Object() {
   }, []);
 
   return (
-    <section className="py-10">
-      <div className="container max-w-3xl">
-        <div className="flex items-end">
-          <div className="flex-1">
-            <h1 className="text-3xl font-bold">Object Detection</h1>
-            <h2 className=" text-gray-500">Powered by Anonymous nerds</h2>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarTrigger />
+      <section className="py-10 flex justify-center text-center w-full">
+        <div className="container ">
+          <div className="flex items-end">
+            <div className="text-left">
+              <h1 className="text-3xl font-bold">Object Detection</h1>
+              <h2 className=" text-gray-500">Powered by Anonymous nerds</h2>
+            </div>
+
+            <div className="flex-1">
+              {ready !== null && ready ? (
+                <div className="flex justify-end gap-2 text-emerald-600">
+                  <p>Transformer Ready</p>
+                  <Check />
+                </div>
+              ) : (
+                <div className="text-end">
+                  <p>Transformer status</p>
+                  <Progress value={progress} />
+                </div>
+              )}
+            </div>
           </div>
 
-          <div className="flex-1">
-            {ready !== null && ready ? (
-              <div className="flex justify-end gap-2 text-emerald-600">
-                <p>Transformer Ready</p>
-                <Check />
-              </div>
-            ) : (
-              <div className="text-end">
-                <p>Transformer status</p>
-                <Progress value={progress} />
-              </div>
-            )}
-          </div>
+          <Dropzone
+            status={status}
+            setStatus={setStatus}
+            detector={detector}
+            result={result}
+            setResult={setResult}
+            className="mt-10 rounded-lg border-2 border-dashed p-20 cursor-pointer"
+          />
         </div>
-
-        <Dropzone
-          status={status}
-          setStatus={setStatus}
-          detector={detector}
-          result={result}
-          setResult={setResult}
-          className="mt-10 rounded-lg border-2 border-dashed p-20 cursor-pointer"
-        />
-      </div>
-    </section>
+      </section>
+    </SidebarProvider>
   );
 }

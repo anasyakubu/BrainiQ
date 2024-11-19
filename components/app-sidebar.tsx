@@ -1,12 +1,13 @@
 import {
-  Calendar,
   Home,
-  Inbox,
-  Search,
-  Settings,
   User2,
+  ScanFace,
   ChevronUp,
+  Bot,
+  BotMessageSquare,
+  Speech,
 } from "lucide-react";
+import { ModeToggle } from "@/components/modetoggle";
 
 import {
   Sidebar,
@@ -36,24 +37,24 @@ const items = [
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Chatbot",
     url: "#",
-    icon: Inbox,
+    icon: Bot,
   },
   {
-    title: "Calendar",
+    title: "Chat PDF",
     url: "#",
-    icon: Calendar,
+    icon: BotMessageSquare,
   },
   {
-    title: "Search",
+    title: "Text to Speech",
     url: "#",
-    icon: Search,
+    icon: Speech,
   },
   {
-    title: "Settings",
+    title: "Object Detector",
     url: "#",
-    icon: Settings,
+    icon: ScanFace,
   },
 ];
 
@@ -67,8 +68,11 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                  <SidebarMenuButton asChild className="p-3">
+                    <a
+                      href={item.url}
+                      className="text-xl mb-5 mt-5 font-semibold"
+                    >
                       <item.icon />
                       <span>{item.title}</span>
                     </a>
@@ -85,8 +89,9 @@ export function AppSidebar() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton>
-                  <User2 /> Username
+                  <User2 /> anasyakubu
                   <ChevronUp className="ml-auto" />
+                  {/* <ModeToggle /> */}
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
