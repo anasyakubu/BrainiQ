@@ -61,7 +61,7 @@ export default function Object() {
         <div className="flex items-end">
           <div className="flex-1">
             <h1 className="text-3xl font-bold">Object Detection</h1>
-            <h2 className=" text-gray-500">With Hugging Face transformers</h2>
+            <h2 className=" text-gray-500">Powered by Anonymous nerds</h2>
           </div>
 
           <div className="flex-1">
@@ -85,7 +85,7 @@ export default function Object() {
           detector={detector}
           result={result}
           setResult={setResult}
-          className="mt-10 rounded-lg border-2 border-dashed p-20"
+          className="mt-10 rounded-lg border-2 border-dashed p-20 cursor-pointer"
         />
       </div>
     </section>

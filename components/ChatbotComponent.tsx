@@ -144,9 +144,9 @@ const ReportComponent = ({ onReportConfirmation }: Props) => {
 
   return (
     // <div className="grid w-full items-start gap-6">
-    <div className="grid w-full items-start gap-6 overflow-auto p-4 pt-0">
+    <div className="grid h-[90%] w-full items-start gap-6 overflow-auto p-4 pt-0">
       <fieldset className="relative grid gap-6 rounded-lg border p-4">
-        <legend className="text-sm font-medium">Study Material</legend>
+        <legend className="text-sm font-medium">Previous 7 Days</legend>
         {isLoading && (
           <div
             className={
@@ -156,27 +156,13 @@ const ReportComponent = ({ onReportConfirmation }: Props) => {
             extracting...
           </div>
         )}
-        <Input
-          type="file"
-          // accept='image/*'
-          onChange={handleReportSelection}
-        />
         <Button
-          variant={"secondary"}
-          className="bg-[#00B612]"
+          // variant={"null"}
+          className="bg-[#00B612] text-gray-900"
           onClick={extractDetails}
         >
-          1. Upload File
+          New Chat
         </Button>
-        <Label>Study Material Summary</Label>
-        <Textarea
-          value={reportData}
-          onChange={(e) => {
-            setReportData(e.target.value);
-          }}
-          placeholder="Extracted data from the Study Material will appear here. Get better recommendations by providing additional Study plans..."
-          className="min-h-72 resize-none border-0 p-3 shadow-none focus-visible:ring-0"
-        />
         <Button
           //   variant="default"
           className="bg-gray-900 text-white"
@@ -184,7 +170,7 @@ const ReportComponent = ({ onReportConfirmation }: Props) => {
             onReportConfirmation(reportData);
           }}
         >
-          2. Looks Good
+          Conversation 1
         </Button>
         <div className="flex flex-row items-center justify-center gap-2 p-4">
           <Label>Powered by Anonymous nerds</Label>

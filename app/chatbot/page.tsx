@@ -6,12 +6,12 @@ import { Settings } from "lucide-react";
 import { ModeToggle } from "@/components/modetoggle";
 import { useState } from "react";
 import { useChat } from "ai/react";
-import ReportComponent from "@/components/ReportComponent";
+import ChatbotComponent from "@/components/ChatbotComponent";
 // import { toast } from "sonner";
 import { useToast } from "@/components/ui/use-toast";
-import ChatComponent from "@/components/chatcomponent";
+import Chatbotchatcomponent from "@/components/Chatbotchatcomponent";
 
-const ChatPDF = () => {
+const ChatBot = () => {
   const { toast } = useToast();
 
   const [reportData, setreportData] = useState("");
@@ -27,7 +27,7 @@ const ChatPDF = () => {
       <div className="flex flex-col">
         <header className="sticky top-0 z-10 flex h-[65px] bg-background items-center gap-1 border-b px-4">
           <h1 className="w-full text-xl font-bold text-gray-900">
-            <span className="flex flex-col">Chat PDF</span>
+            <span className="flex flex-col">ChatMe</span>
           </h1>
           <div className="w-full flex flex-row justify-end gap-2">
             <ModeToggle />
@@ -39,7 +39,7 @@ const ChatPDF = () => {
                 </Button>
               </DrawerTrigger>
               <DrawerContent className="max-h-[80vh]">
-                <ReportComponent onReportConfirmation={onReportConfirmation} />
+                <ChatbotComponent onReportConfirmation={onReportConfirmation} />
               </DrawerContent>
             </Drawer>
           </div>
@@ -50,11 +50,11 @@ const ChatPDF = () => {
         lg:grid-cols-3"
         >
           <div className="hidden md:flex flex-col">
-            <ReportComponent onReportConfirmation={onReportConfirmation} />
+            <ChatbotComponent onReportConfirmation={onReportConfirmation} />
             {/* <SideComponent onReportConfirmation={onReportConfirmation} /> */}
           </div>
           <div className="lg:col-span-2">
-            <ChatComponent reportData={reportData} />
+            <Chatbotchatcomponent reportData={reportData} />
           </div>
         </main>
       </div>
@@ -62,4 +62,4 @@ const ChatPDF = () => {
   );
 };
 
-export default ChatPDF;
+export default ChatBot;
