@@ -54,7 +54,7 @@ const ChatBot = () => {
             {/* <SideComponent onReportConfirmation={onReportConfirmation} /> */}
           </div>
           <div className="lg:col-span-2">
-            <Chatbotchatcomponent reportData={reportData} />
+            <Chatbotchatcomponent />
           </div>
         </main>
       </div>
