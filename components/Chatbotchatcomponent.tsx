@@ -12,6 +12,12 @@ type Message = {
   content: string;
 };
 
+interface MessagesProps {
+  messages: Message[];
+  isLoading: boolean;
+  currentResponse: any;
+}
+
 const apiKey: string = process.env.NEXT_PUBLIC_GEMINI_API_KEY!;
 console.log(apiKey);
 const genAI = new GoogleGenerativeAI(apiKey);

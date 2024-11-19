@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 // import { Toaster } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 // const inter = Inter({ subsets: ["latin"] });
 // const source_code_pro = Source_Code_Pro({ subsets: ["latin"] });

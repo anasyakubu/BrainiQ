@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./home/page";
+import Home from "./dashboard/page";
 
 const page = () => {
   return (
