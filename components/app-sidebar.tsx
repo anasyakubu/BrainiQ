@@ -8,6 +8,8 @@ import {
   Speech,
 } from "lucide-react";
 import { ModeToggle } from "@/components/modetoggle";
+import Image from "next/image";
+import logo from "../assets/logo-tans-ll.png";
 
 import {
   Sidebar,
@@ -63,7 +65,9 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel className="my-5">
+            <Image src={logo} className="w-32" alt="logo" />
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
