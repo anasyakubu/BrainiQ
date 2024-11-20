@@ -3,7 +3,7 @@ import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { CornerDownLeft, Loader2 } from "lucide-react";
 import { Badge } from "./ui/badge";
-import Messages from "./messages";
+import Messages from "./messageschatbot";
 import { GoogleGenerativeAI } from "@google/generative-ai"; // Import the GoogleGenerativeAI SDK
 
 type Message = {
