@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -173,10 +174,12 @@ export default function Component() {
               </p>
             </div>
             <div className="flex space-x-2">
-              <Button variant="outline" size="sm">
-                <Pencil className="mr-2 h-4 w-4" />
-                Edit
-              </Button>
+              <Link href={`/study-plans/${plan.id}/edit`} passHref>
+                <Button variant="outline" size="sm">
+                  <Pencil className="mr-2 h-4 w-4" />
+                  Edit
+                </Button>
+              </Link>
               <Button
                 variant="outline"
                 size="sm"
