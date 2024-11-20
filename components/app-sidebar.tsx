@@ -6,6 +6,7 @@ import {
   Bot,
   BotMessageSquare,
   Speech,
+  NotebookPen,
 } from "lucide-react";
 import { ModeToggle } from "@/components/modetoggle";
 import Image from "next/image";
@@ -35,28 +36,33 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Chatbot",
-    url: "#",
+    url: "/chatbot",
     icon: Bot,
   },
   {
     title: "Chat PDF",
-    url: "#",
+    url: "/chatpdf",
     icon: BotMessageSquare,
   },
   {
     title: "Text to Speech",
-    url: "#",
+    url: "/lingua-speak",
     icon: Speech,
   },
   {
     title: "Object Detector",
-    url: "#",
+    url: "/object-detector",
     icon: ScanFace,
+  },
+  {
+    title: "Summarization",
+    url: "/summarization",
+    icon: NotebookPen,
   },
 ];
 
