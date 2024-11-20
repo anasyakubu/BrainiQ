@@ -10,7 +10,8 @@ const studyPlanContent = () => {
           </h1>
 
           <p className="mt-3 text-neutral-400">
-            LinguaSpeak: Bridging Voices, Connecting Worlds.
+            Take your learning journey to the next level with our cutting-edge
+            AI Study Partner
           </p>
         </div>
       </div>
