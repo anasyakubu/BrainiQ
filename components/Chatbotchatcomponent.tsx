@@ -19,7 +19,7 @@ interface MessagesProps {
 }
 
 const apiKey: string = process.env.NEXT_PUBLIC_GEMINI_API_KEY!;
-console.log(apiKey);
+// console.log(apiKey);
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 

@@ -41,7 +41,7 @@ const items = [
   { title: "Study Plan", url: "/study-plan", icon: Presentation },
   { title: "Text to Speech", url: "/lingua-speak", icon: Speech },
   { title: "Object Detector", url: "/object-detector", icon: ScanFace },
-  { title: "Summarization", url: "/summarization", icon: NotebookPen },
+  { title: "Text Summarizer", url: "/summarization", icon: NotebookPen },
 ];
 
 export function AppSidebar() {
