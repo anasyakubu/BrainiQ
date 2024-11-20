@@ -31,11 +31,7 @@ const ChatComponent = ({ reportData }: Props) => {
         {reportData ? "✓ Material Added" : "No Material Added"}
       </Badge>
       <div className="flex-1" />
-      <Messages
-        messages={messages}
-        isLoading={isLoading}
-        currentResponse={""}
-      />
+      <Messages messages={messages} isLoading={isLoading} />
       {data?.length !== undefined && data.length > 0 && (
         <Accordion type="single" className="text-sm" collapsible>
           <AccordionItem value="item-1">
