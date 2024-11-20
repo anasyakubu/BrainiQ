@@ -10,6 +10,10 @@ import ChatbotComponent from "@/components/ChatbotComponent";
 // import { toast } from "sonner";
 import { useToast } from "@/components/ui/use-toast";
 import Chatbotchatcomponent from "@/components/Chatbotchatcomponent";
+import Image from "next/image";
+import Link from "next/link";
+import logo from "../../assets/logo-tans-l.png";
+import { Home } from "lucide-react";
 
 const ChatBot = () => {
   const { toast } = useToast();
@@ -27,9 +31,17 @@ const ChatBot = () => {
       <div className="flex flex-col">
         <header className="sticky top-0 z-10 flex h-[65px] bg-background items-center gap-1 border-b px-4">
           <h1 className="w-full text-xl font-bold">
-            <span className="flex flex-col">ChatMe</span>
+            <span className="flex gap-5">
+              <Image src={logo} alt="logo" className="w-16" />{" "}
+              <span className="py-3">ChatMe</span>
+            </span>
           </h1>
           <div className="w-full flex flex-row justify-end gap-2">
+            <h3 className="py-2">
+              <Link href={"/"}>
+                <Home />
+              </Link>
+            </h3>
             <ModeToggle />
             <Drawer>
               <DrawerTrigger asChild>
