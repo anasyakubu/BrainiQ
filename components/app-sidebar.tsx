@@ -7,6 +7,7 @@ import {
   BotMessageSquare,
   Speech,
   NotebookPen,
+  Presentation,
 } from "lucide-react";
 import { ModeToggle } from "@/components/modetoggle";
 import Image from "next/image";
@@ -34,36 +35,13 @@ import {
 
 // Menu items.
 const items = [
-  {
-    title: "Home",
-    url: "/",
-    icon: Home,
-  },
-  {
-    title: "Chatbot",
-    url: "/chatbot",
-    icon: Bot,
-  },
-  {
-    title: "Chat PDF",
-    url: "/chatpdf",
-    icon: BotMessageSquare,
-  },
-  {
-    title: "Text to Speech",
-    url: "/lingua-speak",
-    icon: Speech,
-  },
-  {
-    title: "Object Detector",
-    url: "/object-detector",
-    icon: ScanFace,
-  },
-  {
-    title: "Summarization",
-    url: "/summarization",
-    icon: NotebookPen,
-  },
+  { title: "Home", url: "/", icon: Home },
+  { title: "Chatbot", url: "/chatbot", icon: Bot },
+  { title: "Chat PDF", url: "/chatpdf", icon: BotMessageSquare },
+  { title: "Study Plan", url: "/study-plan", icon: Presentation },
+  { title: "Text to Speech", url: "/lingua-speak", icon: Speech },
+  { title: "Object Detector", url: "/object-detector", icon: ScanFace },
+  { title: "Summarization", url: "/summarization", icon: NotebookPen },
 ];
 
 export function AppSidebar() {
