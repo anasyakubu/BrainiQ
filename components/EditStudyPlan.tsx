@@ -201,7 +201,7 @@ export default function EditStudyPlan({ params }: { params: { id: string } }) {
                   />
                 </FormControl>
                 <FormDescription>
-                  Provide a brief description of your study plan's objectives.
+                  Provide a brief description of your study plan`s objectives.
                 </FormDescription>
                 <FormMessage />
               </FormItem>

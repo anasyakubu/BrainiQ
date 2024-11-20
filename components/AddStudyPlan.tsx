@@ -160,7 +160,7 @@ export default function AddStudyPlan() {
                   />
                 </FormControl>
                 <FormDescription>
-                  Provide a brief description of your study plan's objectives.
+                  Provide a brief description of your study plan`s objectives.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
