@@ -3,7 +3,7 @@ import React from "react";
 const studyPlanContent = () => {
   return (
     <div className="studyPlanContent">
-      <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
+      <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-16">
         <div className="text-center">
           <h1 className="text-4xl sm:text-6xl font-extrabold">
             Study <span className="text-[#00B612]">Plan</span>
