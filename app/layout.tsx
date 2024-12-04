@@ -4,6 +4,7 @@ import { Inter, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 // import { Toaster } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
@@ -24,19 +25,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Script src="../node_modules/preline/dist/preline.js"></Script>
-      <body className={`font-nunito-eb`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <TooltipProvider>{children}</TooltipProvider>
-          <Toaster />
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <Script src="../node_modules/preline/dist/preline.js"></Script>
+        <body className={`font-nunito-eb`}>
+          <ClerkLoading>
+            <div className="flex flex-col items-center text-center mt-32">
+              LOADING...
+            </div>
+          </ClerkLoading>
+          <ClerkLoaded>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <TooltipProvider>{children}</TooltipProvider>
+              <Toaster />
+            </ThemeProvider>
+          </ClerkLoaded>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
