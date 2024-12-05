@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 // import { Toaster } from "@/components/ui/sonner";
+import Spinner from "@/components/spinner";
 import { Toaster } from "@/components/ui/toaster";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
@@ -31,7 +32,7 @@ export default function RootLayout({
         <body className={`font-nunito-eb`}>
           <ClerkLoading>
             <div className="flex flex-col items-center text-center mt-32">
-              LOADING...
+              <Spinner />
             </div>
           </ClerkLoading>
           <ClerkLoaded>
