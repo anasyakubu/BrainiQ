@@ -6,10 +6,10 @@ import { authMiddleware } from "@clerk/nextjs";
 export default authMiddleware({
   publicRoutes: [
     "/",
-    "lingua-speak",
-    "chatpdf",
-    "object-detector",
-    "summarization",
+    "/lingua-speak",
+    "/chatpdf",
+    "/object-detector",
+    "/summarization",
     "/forget-password",
     "/api/webhooks/clerk",
   ],
